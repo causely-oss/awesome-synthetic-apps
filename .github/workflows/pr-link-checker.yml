@@ -1,0 +1,26 @@
+name: PR Link Checker
+
+on:
+  pull_request:
+    paths:
+      - 'README.md'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0  # Required for diffing
+
+      - name: Make script executable
+        run: chmod +x .github/scripts/check-links.sh
+
+      - name: Check new links
+        id: check-links
+        run: .github/scripts/check-links.sh 

@@ -6,7 +6,6 @@ A curated collection of demo applications, synthetic data generators, and sample
 
 - [Demo Applications](#demo-applications)
 - [Synthetic Data Generators](#synthetic-data-generators)
-- [Chaos Engineering Tools](#chaos-engineering-tools)
 - [Sample Data Sets](#sample-data-sets)
 - [Contributing](#contributing)
 - [License](#license)
@@ -27,7 +26,7 @@ A collection of demo applications that showcase microservices architectures, dis
 Applications that simulate real-world software behavior, traffic patterns, and user interactions without implementing any internal business logic. The applications are described with a DSL in
 a configuration file.
 
-- [Cisco App Simulator](https://github.com/cisco-open/app-simulator) - A tool for simulating application behavior and generating synthetic data.
+- [App Simulator](https://github.com/cisco-open/app-simulator) - A tool for simulating application behavior and generating synthetic data.
 - [ChaosMania](https://github.com/Causely/chaosmania) - A tool for simulating various application problems in microservices architectures running on Kubernetes.
 
 ## Synthetic Data Generators
