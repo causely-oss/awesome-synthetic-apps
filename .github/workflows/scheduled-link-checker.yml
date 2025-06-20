@@ -2,8 +2,8 @@ name: Scheduled Link Checker
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # Run at midnight UTC every Sunday
-  workflow_dispatch:  # Allow manual triggering
+    - cron: "0 0 * * 0" # Run at midnight UTC every Sunday
+  workflow_dispatch: # Allow manual triggering
 
 permissions:
   contents: write
@@ -24,14 +24,14 @@ jobs:
         if: failure()
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         with:
-          title: '🔍 Remove broken links'
+          title: "🔍 Remove broken links"
           body: |
             Automated link check found and removed the following broken links:
-            
+
             ${{ steps.check-links.outputs.broken_urls }}
           branch: fix-broken-links
-          commit-message: '🔍 Remove broken links'
+          commit-message: "🔍 Remove broken links"
           base: main
           labels: |
             automated pr
-            needs review 
+            needs review

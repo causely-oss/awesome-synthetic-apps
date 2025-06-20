@@ -2,13 +2,13 @@
 
 A curated collection of demo applications, synthetic data generators, and sample data sets for testing, demonstration, and development purposes. Perfect for engineers, QA teams, sales engineers, and developer relations professionals who need realistic applications and data to showcase their tools and platforms.
 
-## Table of Contents
+## Contents
 
 - [Demo Applications](#demo-applications)
+  - [Microservices & Distributed Systems](#microservices--distributed-systems)
+  - [Application Simulators](#application-simulators)
 - [Synthetic Data Generators](#synthetic-data-generators)
 - [Sample Data Sets](#sample-data-sets)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo Applications
 
@@ -35,18 +35,12 @@ Tools and libraries for generating synthetic application data that mimics real-w
 
 - [Test Telemetry Generator](https://github.com/cisco-open/test-telemetry-generator) - A tool for generating synthetic telemetry data for testing and demonstration.
 - [Trace Simulation Receiver](https://github.com/k4ji/tracesimulationreceiver) - A tool for simulating and generating trace data in various formats.
-- [Mustermann](https://github.com/schultyy/mustermann) - A tool that generates test data for OpenTelemetry pipelines using a custom virtual machine
+- [Mustermann](https://github.com/schultyy/mustermann) - A tool that generates test data for OpenTelemetry pipelines using a custom virtual machine.
 
 ## Sample Data Sets
 
-*Coming soon - This section will include links to sample data sets that can be used for testing and demonstration purposes.*
+_Coming soon - This section will include links to sample data sets that can be used for testing and demonstration purposes._
 
 ## Contributing
 
 Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting your contribution. We welcome all contributions that help make this collection more useful for the community!
-
-## License
-
-[![CC0](https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1)](https://creativecommons.org/publicdomain/zero/1.0/)
-
-To the extent possible under law, the contributors have waived all copyright and related or neighboring rights to this work. See the [LICENSE](LICENSE) file for details.

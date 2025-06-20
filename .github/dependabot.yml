@@ -10,4 +10,4 @@ updates:
       - "github-actions"
     commit-message:
       prefix: "github-actions"
-      include: "scope" 
+      include: "scope"

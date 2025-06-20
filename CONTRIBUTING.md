@@ -2,34 +2,46 @@
 
 Thank you for your interest in contributing to this collection! This document provides guidelines and instructions for contributing.
 
+## Contents
+
+- [How to Contribute](#how-to-contribute)
+  - [Adding a New Resource](#adding-a-new-resource)
+  - [Quality Guidelines](#quality-guidelines)
+  - [Pull Request Process](#pull-request-process)
+  - [Code of Conduct](#code-of-conduct)
+  - [Questions or Suggestions](#questions-or-suggestions)
+
 ## How to Contribute
 
 ### Adding a New Resource
 
-1. **Check if the resource is already listed**
-   - Search through the existing entries to avoid duplicates
-   - Check both the main list and any subcategories
+Check if the resource is already listed:
 
-2. **Choose the appropriate category**
-   - If you're unsure where to place your resource, open an issue to discuss it
-   - We can create new categories if needed
+- Search through the existing entries to avoid duplicates
+- Check both the main list and any subcategories
 
-3. **Format your entry**
+Choose the appropriate category:
 
-   - Use the following format:
+- If you're unsure where to place your resource, open an issue to discuss it
+- We can create new categories if needed
 
-     ```markdown
-     - [Resource Name](link) - Brief description of what the resource does and why it's useful.
-     ```
+Format your entry:
 
-   - Keep descriptions concise but informative
-   - Include key features or use cases if relevant
+- Use the following format:
 
-4. **Submit your contribution**
-   - Fork the repository
-   - Create a new branch
-   - Add your entry in the appropriate section
-   - Submit a pull request
+  ```markdown
+  - [Resource Name](link) - Brief description of what the resource does and why it's useful.
+  ```
+
+- Keep descriptions concise but informative
+- Include key features or use cases if relevant
+
+Submit your contribution:
+
+- Fork the repository
+- Create a new branch
+- Add your entry in the appropriate section
+- Submit a pull request
 
 ### Quality Guidelines
 
@@ -56,7 +68,7 @@ Resources should:
 - Provide constructive feedback
 - Help maintain the list's organization and clarity
 
-### Questions or Suggestions?
+### Questions or Suggestions
 
 If you have questions or suggestions about contributing:
 
@@ -64,4 +76,4 @@ If you have questions or suggestions about contributing:
 2. Check existing issues to see if your question has already been answered
 3. Feel free to ask for clarification on any part of these guidelines
 
-Thank you for helping make this collection better! 
+Thank you for helping make this collection better!
