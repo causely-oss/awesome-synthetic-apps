@@ -18,10 +18,14 @@ A collection of demo applications that showcase microservices architectures, dis
 
 **When to use**: If you are looking for an environment that is closest to a real production system, these demo environments are optimal for you.
 
+- [bank of anthos](https://github.com/GoogleCloudPlatform/bank-of-anthos) -  Retail banking sample application showcasing Kubernetes and Google Cloud.
+- [microservices-demo](GoogleCloudPlatform/microservices-demo) - Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.
 - [OpenTelemetry Demo](https://github.com/open-telemetry/opentelemetry-demo) - A microservice-based distributed system demonstrating OpenTelemetry implementation in a near real-world environment.
 - [Podtato Head](https://github.com/podtato-head/podtato-head) - A microservices demo application with multiple implementations and deployment options.
-- [Spring PetClinic](https://github.com/spring-projects/spring-petclinic) - A sample Spring-based application that demonstrates best practices for building web applications.
 - [RealWorld](https://github.com/gothinkster/realworld) - A collection of full-stack applications demonstrating different frameworks and technologies.
+- [Spring PetClinic](https://github.com/spring-projects/spring-petclinic) - A sample Spring-based application that demonstrates best practices for building web applications.
+- [The New Stack (TNS) observability app](https://github.com/grafana/tn) - A simple three-tier demo application, fully instrumented with the 3 pillars of observability: metrics, logs, and traces.
+
 
 ### Application Simulators
 
@@ -39,9 +43,12 @@ Tools and libraries for generating synthetic application data that mimics real-w
 
 **When to use**: If you only care about the data that is generated and send to your analytics or observability platform, these synthetic data generators are for you.
 
+- [otelgen](https://github.com/krzko/otelgen) - A tool to generate synthetic OpenTelemetry logs, metrics and traces using OTLP (gRPC and HTTP).
+- [Mustermann](https://github.com/schultyy/mustermann) - A tool that generates test data for OpenTelemetry pipelines using a custom virtual machine.
+- [Telemetry generator for OpenTelemetry](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/cmd/telemetrygen) - This utility simulates a client generating traces, metrics, and logs. It is useful for testing and demonstration purposes.
 - [Test Telemetry Generator](https://github.com/cisco-open/test-telemetry-generator) - A tool for generating synthetic telemetry data for testing and demonstration.
 - [Trace Simulation Receiver](https://github.com/k4ji/tracesimulationreceiver) - A tool for simulating and generating trace data in various formats.
-- [Mustermann](https://github.com/schultyy/mustermann) - A tool that generates test data for OpenTelemetry pipelines using a custom virtual machine.
+
 
 ## Sample Data Sets
 
