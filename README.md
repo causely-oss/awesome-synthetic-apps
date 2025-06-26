@@ -19,7 +19,7 @@ A collection of demo applications that showcase microservices architectures, dis
 **When to use**: If you are looking for an environment that is closest to a real production system, these demo environments are optimal for you.
 
 - [bank of anthos](https://github.com/GoogleCloudPlatform/bank-of-anthos) -  Retail banking sample application showcasing Kubernetes and Google Cloud.
-- [microservices-demo](GoogleCloudPlatform/microservices-demo) - Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.
+- [microservices-demo](https://github.com/GoogleCloudPlatform/microservices-demo) - Sample cloud-first application with 10 microservices showcasing Kubernetes, Istio, and gRPC.
 - [OpenTelemetry Demo](https://github.com/open-telemetry/opentelemetry-demo) - A microservice-based distributed system demonstrating OpenTelemetry implementation in a near real-world environment.
 - [Podtato Head](https://github.com/podtato-head/podtato-head) - A microservices demo application with multiple implementations and deployment options.
 - [RealWorld](https://github.com/gothinkster/realworld) - A collection of full-stack applications demonstrating different frameworks and technologies.
