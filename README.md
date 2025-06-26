@@ -24,7 +24,7 @@ A collection of demo applications that showcase microservices architectures, dis
 - [Podtato Head](https://github.com/podtato-head/podtato-head) - A microservices demo application with multiple implementations and deployment options.
 - [RealWorld](https://github.com/gothinkster/realworld) - A collection of full-stack applications demonstrating different frameworks and technologies.
 - [Spring PetClinic](https://github.com/spring-projects/spring-petclinic) - A sample Spring-based application that demonstrates best practices for building web applications.
-- [The New Stack (TNS) observability app](https://github.com/grafana/tn) - A simple three-tier demo application, fully instrumented with the 3 pillars of observability: metrics, logs, and traces.
+- [The New Stack (TNS) observability app](https://github.com/grafana/tns) - A simple three-tier demo application, fully instrumented with the 3 pillars of observability: metrics, logs, and traces.
 
 
 ### Application Simulators
