@@ -56,15 +56,21 @@ check_url() {
     return 0
 }
 
-# Function to extract URLs from diff
-extract_urls_from_diff() {
+# Function to extract URLs and line numbers based on mode
+extract_urls_and_line_numbers() {
     local file=$1
     if [ "$CHECK_ALL" = true ] || [ "$FIX_MODE" = true ]; then
-        # In all/fix mode, get all URLs from the file
-        grep -o '\[.*\]([^)]*)' "$file" | sed -E 's/.*\[.*\]\((.*)\)/\1/'
+        # In all/fix mode, get URLs from list items in the file with line numbers
+        grep -n '\[.*\](http[^)]*)' "$file" | sed -E 's/([0-9]+):.*\[.*\]\(([^)]+)\).*/\1 \2/'
     else
-        # In changes mode, get only new URLs from diff
-        git diff HEAD^ HEAD "$file" | grep -o '\[.*\]([^)]*)' | grep '^+' | sed -E 's/^\+.*\[.*\]\((.*)\)/\1/'
+        # In changes mode, get only new URLs from diff with line numbers
+        if [[ "$(uname)" == "Darwin" ]]; then
+            # Use gawk on macOS
+            git diff -U0 HEAD^ HEAD "$file" | gawk '/^@@/ { split($0, a, " "); split(a[2], b, ","); line=substr(b[1], 2); next } /^\+/ && !/^\+\+\+/ { if ($0 ~ /\[.*\]\(http[^)]+\)/) { match($0, /\[.*\]\((http[^)]+)\)/, arr); print line " " arr[1]; line++ } }'
+        else
+            # Use awk assuming GNU awk
+            git diff -U0 HEAD^ HEAD "$file" | awk '/^@@/ { split($0, a, " "); split(a[2], b, ","); line=substr(b[1], 2); next } /^\+/ && !/^\+\+\+/ { if ($0 ~ /\[.*\]\(http[^)]+\)/) { match($0, /\[.*\]\((http[^)]+)\)/, arr); print line " " arr[1]; line++ } }'
+        fi
     fi
 }
 
@@ -102,35 +108,37 @@ report_broken_links() {
         echo "⚠️ The following links appear to be broken:"
         echo "$broken_urls"
     else
-        echo "⚠️ The following newly added links appear to be broken:$broken_urls" > comment.txt
-        echo "" >> comment.txt
-        echo "Please fix these links before merging." >> comment.txt
-        gh pr comment ${{ github.event.pull_request.number }} --body-file comment.txt
+        echo "⚠️ The following newly added links appear to be broken:$broken_urls"
     fi
 }
 
 # Main script
 echo "Checking links in $TARGET_FILE..."
 
-# Extract URLs
-NEW_URLS=$(extract_urls_from_diff "$TARGET_FILE")
+# Extract URLs and line numbers
+NEW_URLS_AND_LINES=$(extract_urls_and_line_numbers "$TARGET_FILE")
 
-if [ -z "$NEW_URLS" ]; then
+if [ -z "$NEW_URLS_AND_LINES" ]; then
     echo "No URLs found"
     exit 0
 fi
 
-echo "Found URLs to check:"
-echo "$NEW_URLS"
-
 # Check each URL
 BROKEN_URLS=""
-for URL in $NEW_URLS; do
-    echo "Checking $URL..."
+while IFS= read -r line; do
+    LINE_NUMBER=$(echo "$line" | awk '{print $1}')
+    URL=$(echo "$line" | awk '{print $2}')
+    echo "Checking $URL at line $LINE_NUMBER..."
     if ! check_url "$URL"; then
-        BROKEN_URLS="$BROKEN_URLS\n$URL"
+        BROKEN_URLS="$BROKEN_URLS\nLine $LINE_NUMBER: $URL"
     fi
-done
+    
+    # Annotate PR if URL is broken
+    if [ ! -z "$BROKEN_URLS" ]; then
+        echo "::error file=$TARGET_FILE,line=$LINE_NUMBER::Broken link: $URL"
+    fi
+
+done <<< "$NEW_URLS_AND_LINES"
 
 # Report results
 if [ ! -z "$BROKEN_URLS" ]; then
