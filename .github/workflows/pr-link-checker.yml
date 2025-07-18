@@ -18,9 +18,6 @@ jobs:
         with:
           fetch-depth: 0 # Required for diffing
 
-      - name: Make script executable
-        run: chmod +x .github/scripts/check-links.sh
-
       - name: Check new links
         id: check-links
         run: .github/scripts/check-links.sh
