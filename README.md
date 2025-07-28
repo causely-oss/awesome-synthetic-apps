@@ -48,6 +48,7 @@ Tools and libraries for generating synthetic application data that mimics real-w
 - [Telemetry generator for OpenTelemetry](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/cmd/telemetrygen) - This utility simulates a client generating traces, metrics, and logs. It is useful for testing and demonstration purposes.
 - [Test Telemetry Generator](https://github.com/cisco-open/test-telemetry-generator) - A tool for generating synthetic telemetry data for testing and demonstration.
 - [Trace Simulation Receiver](https://github.com/k4ji/tracesimulationreceiver) - A tool for simulating and generating trace data in various formats.
+- [AI-Powered Observability Demo Generator](https://github.com/davidgeorgehope/otel-demo-gen) - Users can describe scenarios in natural language, and the system will generate and stream synthetic telemetry into OpenTelemetry (OTel) Collectors via OTLP.
 
 
 ## Sample Data Sets
