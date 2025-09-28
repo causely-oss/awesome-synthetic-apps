@@ -43,12 +43,13 @@ Tools and libraries for generating synthetic application data that mimics real-w
 
 **When to use**: If you only care about the data that is generated and send to your analytics or observability platform, these synthetic data generators are for you.
 
-- [otelgen](https://github.com/krzko/otelgen) - A tool to generate synthetic OpenTelemetry logs, metrics and traces using OTLP (gRPC and HTTP).
+- [AI-Powered Observability Demo Generator](https://github.com/davidgeorgehope/otel-demo-gen) - Users can describe scenarios in natural language, and the system will generate and stream synthetic telemetry into OpenTelemetry (OTel) Collectors via OTLP.
+- [fuzzy-train](https://github.com/sagarnikam123/fuzzy-train) - A versatile fake log generator for testing and development that runs anywhere, supporting multiple formats (JSON, logfmt, Apache, syslog) with configurable output options.
 - [Mustermann](https://github.com/schultyy/mustermann) - A tool that generates test data for OpenTelemetry pipelines using a custom virtual machine.
+- [otelgen](https://github.com/krzko/otelgen) - A tool to generate synthetic OpenTelemetry logs, metrics and traces using OTLP (gRPC and HTTP).
 - [Telemetry generator for OpenTelemetry](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/cmd/telemetrygen) - This utility simulates a client generating traces, metrics, and logs. It is useful for testing and demonstration purposes.
 - [Test Telemetry Generator](https://github.com/cisco-open/test-telemetry-generator) - A tool for generating synthetic telemetry data for testing and demonstration.
 - [Trace Simulation Receiver](https://github.com/k4ji/tracesimulationreceiver) - A tool for simulating and generating trace data in various formats.
-- [AI-Powered Observability Demo Generator](https://github.com/davidgeorgehope/otel-demo-gen) - Users can describe scenarios in natural language, and the system will generate and stream synthetic telemetry into OpenTelemetry (OTel) Collectors via OTLP.
 
 
 ## Sample Data Sets
