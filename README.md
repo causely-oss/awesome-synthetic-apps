@@ -36,6 +36,7 @@ a configuration file.
 
 - [App Simulator](https://github.com/cisco-open/app-simulator) - A tool for simulating application behavior and generating synthetic data.
 - [ChaosMania](https://github.com/Causely/chaosmania) - A tool for simulating various application problems in microservices architectures running on Kubernetes.
+- [Microcks](https://microcks.io/) - Open source (CNCF [project](https://landscape.cncf.io/?selected=microcks&item=app-definition-and-development--application-definition-image-build--microcks)), cloud native API mocking and testing platform supporting OpenAPI, AsyncAPI, gRPC/Protobuf, GraphQL, and SOAP; provides smart dynamic mocking and contract testing with CI/CD integration.
 
 ## Synthetic Data Generators
 
